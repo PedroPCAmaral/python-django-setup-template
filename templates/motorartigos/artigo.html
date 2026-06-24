@@ -1,0 +1,13 @@
+{% extends 'motorartigos/base.html' %}
+{% load static %}
+
+{% block content %}
+    <main class="text-center py-5">
+        <h1 class="display-3 fw-bold text-success mb-3">Cheguei aqui! 🚀</h1>
+        <p class="lead text-muted">A herança de templates do Django está funcionando perfeitamente.</p>
+        
+        <div class="mt-4">
+            <a href="{% url 'index' %}" class="btn btn-outline-info px-4">← Voltar para o Painel</a>
+        </div>
+    </main>
+{% endblock %}
