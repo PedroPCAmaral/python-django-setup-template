@@ -4,7 +4,7 @@ from tinymce.models import HTMLField
 
 class Autor(models.Model):
     nome = models.CharField(max_length=100)
-    # CORRIGIDO: Mudamos para HTMLField para que a biografia use o editor do TinyMCE igual ao do professor
+   
     biografia = HTMLField()
     email = models.EmailField()
 

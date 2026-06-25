@@ -1,0 +1,14 @@
+{% extends 'motorartigos/base.html' %}
+{% block content %}
+<main class="container py-5 text-center">
+    <div class="p-5 bg-dark rounded border border-secondary shadow-lg col-lg-8 mx-auto">
+        <h1 class="text-warning display-4 mb-4">Maritaca AI</h1>
+        <p class="fs-4 text-white mb-4 lh-base">
+            O <strong>Maritaca AI</strong> (MariTalk) representa a inovação e o orgulho do cenário de tecnologia nacional. 
+            Desenvolvido por pesquisadores e engenheiros no Brasil, é um modelo de linguagem totalmente otimizado para a língua portuguesa, 
+            compreendendo nuances culturais, gírias locais e termos técnicos do nosso país com precisão única.
+        </p>
+        <a href="{% url 'index' %}" class="btn btn-outline-info px-4 py-2">Voltar ao Início</a>
+    </div>
+</main>
+{% endblock %}

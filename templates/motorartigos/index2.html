@@ -1,0 +1,129 @@
+{% extends 'motorartigos/base.html' %}
+{% load static %}
+
+{% block content %}
+    <section class="hero-section text-center mb-5">
+        <h1>O melhor conteúdo sobre Django, IA e Data Science do Brasil!</h1>
+        <p class="text-muted">Aprenda a unir o poder do desenvolvimento web com o futuro da inteligência artificial.</p>
+        <button class="btn btn-primary cta-button">Explore os Artigos</button>
+    </section>
+
+    <main class="mb-5">
+        <h2 class="text-white mb-4 pb-2 border-bottom border-primary">Artigos em Destaque</h2>
+        
+        <div class="articles-grid mb-5">
+            <article class="card-antigo p-3 bg-secondary bg-opacity-10 rounded mb-3">
+                <span class="badge bg-primary category category-django">Django</span>
+                <h3 class="h4 mt-2">Como Estruturar um Projeto Django do Zero</h3>
+                <p class="text-muted">Aprenda as melhores práticas de organization, uso de venv e variáveis de ambiente.</p>
+                <a href="#" class="read-more text-info">Ler artigo →</a>
+            </article>
+
+            <article class="card-antigo p-3 bg-secondary bg-opacity-10 rounded mb-3">
+                <span class="badge bg-info text-dark category category-ai">Inteligência Artificial</span>
+                <h3 class="h4 mt-2">Integrando LLMs e IAs no Back-end Django</h3>
+                <p class="text-muted">Descubra como conectar APIs de IA dentro das suas views do Django de forma assíncrona.</p>
+                <a href="#" class="read-more text-info">Ler artigo →</a>
+            </article>
+
+            <article class="card-antigo p-3 bg-secondary bg-opacity-10 rounded mb-3">
+                <span class="badge bg-warning text-dark category category-ds">Data Science</span>
+                <h3 class="h4 mt-2">Análise de Dados com Pandas e Django</h3>
+                <p class="text-muted">Como criar dashboards incríveis processando dados diretamente no seu banco MySQL.</p>
+                <a href="#" class="read-more text-info">Ler artigo →</a>
+            </article>
+        </div>
+
+        <hr class="text-secondary my-5"> 
+        
+        <h2 class="text-white mb-4 pb-2 border-bottom border-info text-center">Modelos de Inteligência Artificial</h2>
+        
+        <div class="row row-cols-1 row-cols-md-3 g-4 mb-5">
+            
+            <div class="col">
+                <div class="card h-100 bg-dark text-white border-secondary text-center p-3 shadow-sm">
+                    <img src="{% static 'img/logo-chatgpt.png' %}" class="card-img-top mx-auto" style="width: 20%; height: auto;" alt="ChatGPT">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mt-3">ChatGPT</h5>
+                        <p class="card-text text-muted flex-grow-1">Criado pela OpenAI, é pioneiro em conversação natural, geração de códigos complexos e análise avançada de dados.</p>
+                        <a href="{% url 'explicar_ia' 'chatgpt' %}" class="btn btn-outline-info mt-auto">Explicar Inteligência</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 bg-dark text-white border-secondary text-center p-3 shadow-sm">
+                    <img src="{% static 'img/logo-claude.png' %}" class="card-img-top mx-auto" style="width: 20%; height: auto;" alt="Claude">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mt-3">Claude</h5>
+                        <p class="card-text text-muted flex-grow-1">Desenvolvido pela Anthropic, destaca-se pelo raciocínio lógico apurado, contexto estendido e alta segurança da informação.</p>
+                        <a href="{% url 'explicar_ia' 'claude' %}" class="btn btn-outline-info mt-auto">Explicar Inteligência</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 bg-dark text-white border-secondary text-center p-3 shadow-sm">
+                    <img src="{% static 'img/logo-gemini.png' %}" class="card-img-top mx-auto" style="width: 20%; height: auto;" alt="Gemini">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mt-3">Gemini</h5>
+                        <p class="card-text text-muted flex-grow-1">A IA multimodal da Google, criada do zero para processar e compreender textos, códigos, imagens e vídeos nativamente.</p>
+                        <a href="{% url 'explicar_ia' 'gemini' %}" class="btn btn-outline-info mt-auto">Explicar Inteligência</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 bg-dark text-white border-secondary text-center p-3 shadow-sm">
+                    <img src="{% static 'img/logo-groq.png' %}" class="card-img-top mx-auto" style="width: 20%; height: auto;" alt="Groq">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mt-3">Groq</h5>
+                        <p class="card-text text-muted flex-grow-1">Focado em desempenho extremo, utiliza chips de hardware LPU para processar e entregar respostas de IA em milissegundos.</p>
+                        <a href="{% url 'explicar_ia' 'groq' %}" class="btn btn-outline-info mt-auto">Explicar Inteligência</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 bg-dark text-white border-secondary text-center p-3 shadow-sm">
+                    <img src="{% static 'img/logo-maritaca.png' %}" class="card-img-top mx-auto" style="width: 20%; height: auto;" alt="Maritaca">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mt-3">Maritaca AI</h5>
+                        <p class="card-text text-muted flex-grow-1">Inovação e orgulho nacional! Um modelo de linguagem desenvolvido no Brasil, otimizado para o nosso idioma e cultura.</p>
+                        <a href="{% url 'explicar_ia' 'maritaca' %}" class="btn btn-outline-info mt-auto">Explicar Inteligência</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100 bg-dark text-white border-secondary text-center p-3 shadow-sm">
+                    <img src="{% static 'img/logo-mysql.png' %}" class="card-img-top mx-auto" style="width: 20%; height: auto;" alt="MySQL">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title mt-3">MySQL Datasets</h5>
+                        <p class="card-text text-muted flex-grow-1">O banco de dados relacional robusto que armazena todo o histórico, logs e inteligência de dados do Motor Artigos.</p>
+                        <a href="{% url 'explicar_ia' 'mysql' %}" class="btn btn-outline-info mt-auto">Explicar Banco</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <hr class="text-secondary my-5">
+        <h2 class="text-white mb-4">Autores Cadastrados</h2>
+        
+        <ul class="list-unstyled text-white bg-dark p-4 rounded border border-secondary shadow-sm">
+            {% for chave, autor in autores.items %}
+                <li class="mb-3">
+                    <strong>ID do Autor:</strong> {{ chave }} <br>
+                    <strong>Nome:</strong> {{ autor.nome }} <br>
+                    <strong>Biografia:</strong> {{ autor.biografia }} <br>
+                    <strong>E-mail:</strong> {{ autor.email }}
+                </li>
+                {% if not forloop.last %}
+                    <hr class="border-secondary">
+                {% endif %}
+            {% empty %}
+                <p class="text-muted m-0">Nenhum autor encontrado.</p>
+            {% endfor %}
+        </ul>
+        </main>
+{% endblock %}

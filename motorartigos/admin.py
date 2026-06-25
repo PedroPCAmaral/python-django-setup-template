@@ -21,10 +21,10 @@ class ArtigoAdmin(admin.ModelAdmin):
     search_fields = ('id_fk_autor__nome', 'id_fk_eixo__nome')
     list_filter = ('id_fk_eixo', 'data_publicacao')
     
-    # LUPA INTERATIVA: Ativa a busca inteligente por ID
+    # LUPA INTERATIVA
     raw_id_fields = ('id_fk_autor', 'id_fk_eixo')
     
-    # Injeta o script direto da nuvem e força a ativação do editor rico no Texto
+    # Injeta o script direto da nuvem 
     class Media:
         js = (
             'https://cdn.jsdelivr.net/npm/tinymce@6/tinymce.min.js',

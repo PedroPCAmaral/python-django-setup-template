@@ -1,0 +1,14 @@
+{% extends 'motorartigos/base.html' %}
+{% block content %}
+<main class="container py-5 text-center">
+    <div class="p-5 bg-dark rounded border border-secondary shadow-lg col-lg-8 mx-auto">
+        <h1 class="text-warning display-4 mb-4">Gemini</h1>
+        <p class="fs-4 text-white mb-4 lh-base">
+            O <strong>Gemini</strong> é a inteligência artificial multimodal da Google, construída do zero para processar e 
+            compreender diferentes tipos de informação simultaneamente. Ele consegue analisar de forma integrada textos, 
+            linhas de código, imagens, áudios e vídeos nativamente com extrema velocidade.
+        </p>
+        <a href="{% url 'index' %}" class="btn btn-outline-info px-4 py-2">Voltar ao Início</a>
+    </div>
+</main>
+{% endblock %}

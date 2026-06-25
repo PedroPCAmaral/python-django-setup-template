@@ -1,0 +1,14 @@
+{% extends 'motorartigos/base.html' %}
+{% block content %}
+<main class="container py-5 text-center">
+    <div class="p-5 bg-dark rounded border border-secondary shadow-lg col-lg-8 mx-auto">
+        <h1 class="text-warning display-4 mb-4">Claude AI</h1>
+        <p class="fs-4 text-white mb-4 lh-base">
+            Desenvolvido pela <strong>Anthropic</strong>, o Claude é amplamente reconhecido por seu raciocínio lógico apurado, 
+            interpretação profunda de textos e alta segurança da informação. Ele suporta janelas massivas de processamento de contexto, 
+            sendo ideal para analisar livros inteiros, documentações extensas e logs complexos de sistemas.
+        </p>
+        <a href="{% url 'index' %}" class="btn btn-outline-info px-4 py-2">Voltar ao Início</a>
+    </div>
+</main>
+{% endblock %}

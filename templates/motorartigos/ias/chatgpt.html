@@ -1,0 +1,14 @@
+{% extends 'motorartigos/base.html' %}
+{% block content %}
+<main class="container py-5 text-center">
+    <div class="p-5 bg-dark rounded border border-secondary shadow-lg col-lg-8 mx-auto">
+        <h1 class="text-warning display-4 mb-4">ChatGPT</h1>
+        <p class="fs-4 text-white mb-4 lh-base">
+            Criado pela <strong>OpenAI</strong>, o ChatGPT é o pioneiro em conversação natural baseada em LLMs. 
+            Ele se destaca pela capacidade de gerar e corrigir códigos complexos, realizar análises avançadas de dados 
+            e manter contextos longos durante uma conversa, revolucionando a produtividade no desenvolvimento de software.
+        </p>
+        <a href="{% url 'index' %}" class="btn btn-outline-info px-4 py-2">Voltar ao Início</a>
+    </div>
+</main>
+{% endblock %}

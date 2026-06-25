@@ -1,6 +1,5 @@
 from django.contrib import admin
 from django.urls import path, include
-# Importações necessárias para corrigir o visual dos arquivos estáticos
 from django.conf import settings
 from django.conf.urls.static import static
 
@@ -15,6 +14,7 @@ urlpatterns = [
     path('tinymce/', include('tinymce.urls')), 
 ]
 
-# CORREÇÃO DA CAIXA BRANCA: Força o Django a carregar os arquivos CSS/JS no ambiente de desenvolvimento
+# Configuração para carregar arquivos de mídia e estáticos em desenvolvimento
 if settings.DEBUG:
     urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

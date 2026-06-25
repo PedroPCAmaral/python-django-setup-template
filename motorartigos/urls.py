@@ -1,10 +1,14 @@
 from django.urls import path
-from motorartigos.views import index, artigo, explicar_ia
+from . import views
 
 urlpatterns = [
-    path('', index, name='index'), 
-    path('artigo/', artigo, name='artigo'),
+    # Página inicial (index)
+    path('', views.index, name='index'),
     
-    # Rota dinâmica para capturar o nome de cada
-    path('ia/<str:nome_ia>/', explicar_ia, name='explicar_ia'),
+    # Página de leitura de cada artigo usando o ID dinâmico
+    path('artigo/<int:id>/', views.detalhe_artigo, name='detalhe_artigo'),
+    
+    # Rota dinâmica para as 6 explicações de IA/Banco
+    path('ia/<str:nome_ia>/', views.explicar_ia, name='explicar_ia'),
 ]
+

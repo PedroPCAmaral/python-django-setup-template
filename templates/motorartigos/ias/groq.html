@@ -1,0 +1,12 @@
+{% extends 'motorartigos/base.html' %}
+{% block content %}
+<main class="container py-5 text-center">
+    <div class="p-5 bg-dark rounded border border-secondary shadow-lg col-lg-8 mx-auto">
+        <h1 class="text-warning display-4 mb-4">Groq</h1>
+        <p class="fs-4 text-white mb-4 lh-base">
+            Focado em desempenho extremo, o <strong>Groq</strong> não é apenas um modelo de linguagem, mas sim uma arquitetura de hardware revolucionária baseada em LPUs (Language Processing Units). Ele foi desenhado para entregar respostas de modelos de IA com latência quase zero, gerando centenas de tokens por segundo em tempo recorde.
+        </p>
+        <a href="{% url 'index' %}" class="btn btn-outline-info px-4 py-2">Voltar ao Início</a>
+    </div>
+</main>
+{% endblock %}
